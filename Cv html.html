@@ -1,226 +1,303 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+    <title>Portofilio</title>
+<style>
+    .container1 {
+        background:#141414;
+        color: white;
+        padding: 0px;
+        -webkit-column-count: 2; 
+  -moz-column-count: 2; 
+  column-count: 1;
+}
+    
+    .container2 {
+        background:#141414;
+        color: white;
+        padding: 0px;
+        -webkit-column-count: 2; 
+  -moz-column-count: 2; 
+  column-count: 1;
+    }
+    .container3 {
+        background:#141414;
+        color: white;
+        padding: 0px;
+        -webkit-column-count: 2; 
+  -moz-column-count: 2; 
+  column-count: 1;
+    }
+    .container4 {
+        background:#141414;
+        color: white;
+        padding: 0px;
+        -webkit-column-count: 2; 
+  -moz-column-count: 2; 
+  column-count: 1;
+    }
+    #back-image{
+        background-image: url("web.jpeg");
+        height: 300px;
+        margin-bottom: 0px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 
-<head>
-    <meta charset="UTF-8">
-    <meta charset="viewport">
-    Content="width=device-width,
-    Initial-scale=1.0">
-    <meta http-equiv="X-UA_Compatible" Content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>CV</title>
-    <style>
-        #grad1 {
-            background-color: #f5560c;
-            background-image: linear-gradient(#22a5da, #26c769);
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 100% 100%;
+    }
+    #back-image1{
+        background-image: url("nature.jpg");
+        height: 180px;
+        margin-bottom: 0px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 
-        }
-    </style>
-    <style>
-        .wrapper {
-            display: grid;
-            border: dotted;
-            grid-template-columns: repeat(3, 1fr);
-        }
+    }
+    #back-image2{
+        background-image: url("GIS2.png");
+        height: 150px;
+        margin-bottom: 0px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 
-        .wrapper>div {
-            background: rgb(224, 13, 13);
-            padding: 1em;
-        }
+    }
+    .text-center{
+        font-family: 'Courier New', Courier, monospace;
+        color:rgb(68, 177, 47);
+        font-size: 30px;
+        position: absolute;
+        top: 150px;
+        left: 520px;
+    }
+    .text-center1{
+        font-family: 'Courier New', Courier, monospace;
+        color:rgb(241, 234, 234);
+        font-size: 40px;
+        position: absolute;
+        top: 90px;
+        left: 480px;
+    }
+    .text-center3{
+        font-family: 'Courier New', Courier, monospace;
+        color:rgb(68, 177, 47);
+        font-size: 30px;
+        position: absolute;
+        top: 30px;
+        left: 480px;
+    }
+    #CV{
+        font-family: 'Courier New', Courier, monospace;
+        color:black;
+        font-size: 27px;
+        list-style-type:none;    
+        display: flex;
+        float: left;
+        position: absolute;
+        top: 1px;
+        left: 80px;
+    }
+    
+    .col-md-12{
+        padding-top: 30px;
+    }
+    
+    .boxes {
+        background:#141414;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: norepeat;
+    }
+    .box {
+        background:#82a2e7;
+        text-align: center;
+        padding: 1.5rem 2rem;
+        box-shadow: 5px 10px #f3f3f3;
+        border-radius: 20%;
+    }
+    .boxes :hover {
+        cursor: pointer;
+        background:#dde977;
+    }
+    .footer-main-div {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        background: #04032e;
+        padding: 20px 0px;
+    }
+    .footer-social-icons{
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+    .footer-social-icons ul{
+         margin: auto;
+         padding: 0px;
+         text-align: center;
+         
+    }
+    .footer-social-icons ul li{
+         display: inline-block;
+         width: 50px;
+         height: 50px;
+         margin: 0px 10px;
+         cursor: pointer;
+    }
+    .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  
+  
+}
+.fa :hover {
+    
+    cursor: pointer;
+}
 
-        .wrapper>div:nth-child(odd) {
-            background: rgb(86, 97, 145);
-        }
-    </style>
-</head>
+.fa-facebook {
+  background: rgb(227, 229, 231);
+  color: rgb(55, 40, 189);
+}
+.fa-twitter {
+  background: rgb(55, 40, 189);
+  color: rgb(227, 229, 231);
+}
+.fa-google {
+  background: rgb(160, 31, 48);
+  color: rgb(223, 222, 230);
+}
+.fa-linkedin {
+    background: rgb(227, 229, 231);
+  color: rgb(55, 40, 189);
+}
+    
+</style>
 
-<body>
-    <div id="grad1">
-        <div class="logo">
-            <a href="#">
-                <img src="Semere.png" style="width:250px;height:250px;"></a>
+  </head>
+  <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="portofilionew.html">Portofilio</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </nav>
+
+           
+    <div id="back-image">
+        <div class="row h-100">
+            <div class="col-md-12 align-self-top">
+                <h1 class="text-center1"><b>Semere Tesfai Abraham</b></h1>
+                <h1 class="text-center"><b>Junior GIS developer</b></h1>
+                          </div>
         </div>
-        <div class="first common"><b>Semere Tesfai Abraham</b></div>
-        <div class="second common"><b>Junior Web Developer</b></div>
-        <div class="background">
-            <div class="transbox">
-                <h4><font color="blue"><b>Contact information</b></font></h4>
-                <p>
-                    <font color="red"><b>Address:</b></font>
-                </p>
-                <p>
-                    <font color="red">Wethouder Haanjesstraat 56</font>
-                </p>
-                <p>
-                    <font color="red">PostCode 7531XS Enschede</font>
-                </p>
-                <p>
-                    <font color="red"><b>Email:</font></b>
-                </p>
-                <p>
-                    <font color="red">semeretesfai4@gmail.com</font>
-                </p>
-            </div>
-            <div class="transbox1">
-                <h4 style="font-size: 2em"><b>
-                        <font color="red"><img src="cert.jpg" align="right" style="width:80px;height:80px">Oplieding</font>
-                    </b></h4>
-                <ul>
-                    <li><a href="#"><b>
-                                <font color="blue">Universitiet Twente</font>
-                            </b></a></li>
-                    <li><a href="#Taal"><b>
-                                <font color="blue">Universitiet Asmara</font>
-                            </b></a></li>
-                </ul>
-            </div>
-            <div class="transbox2">
-
-                <h4 style="font-size: 2em"><b>
-                        <font color="red"><img src="GIS.jpg" align= "right" style="width:80px;height:80px"><img src="HTML5_CSS_JavaScript.png" align="right" style="width:100px;height:80px">Skills</font>
-                    </b></h4>
-                <ul>
-                    <li><a href="#"><b>
-                                <font color="blue">GIS</font>
-                            </b></a></li>
-                    <li><a href="#Taal"><b>
-                                <font color="blue">Remote Sensing</font>
-                            </b></a></li>
-                    <li><a href="#Taal"><b>
-                                <font color="blue">Data Analysis</font>
-                            </b></a></li>
-                    <li><a href="#Taal"><b>
-                                <font color="blue">Spatial Analysis</font>
-                            </b></a></li>
-                    <li><a href="#Taal"><b>
-                                    <font color="blue">Research</font>
-                                </b></a></li>
-                        <li><a href="#Taal"><b>
-                                <font color="blue">HTML</font>
-                            </b></a></li>
-                    <li><a href="#Taal"><b>
-                                <font color="blue">CSS</font>
-                            </b></a></li>
-                    <li><a href="#Taal"><b>
-                                <font color="blue">Javascript</font>
-                            </b></a></li>
-                </ul>
-            </div>
-            <div class="transbox3">
-
-                    <h4 style="font-size: 2em"><b>
-                            <font color="red"><img src="courses.jpg" align= "right" style="width:80px;height:80px">Cursus</font>
-                        </b></h4>
-                    <ul>
-                        <li><a href="#"><b>
-                                    <font color="blue">GIS</font>
-                                </b></a></li>
-                        <li><a href="#Taal"><b>
-                                    <font color="blue">Participatory Development Approaches (PRA)</font>
-                                </b></a></li>
-                        <li><a href="#Taal"><b>
-                                    <font color="blue">National Action Plan</font>
-                                </b></a></li>
-                        <li><a href="#Taal"><b>
-                                    <font color="blue">Rural Economy and development</font>
-                                </b></a></li>
-                        
-                    </ul>
-                </div>
-        </div>
-        <nav id="mainNav">
-
-            <ul>
-                <li><a href="#"><b>
-                            <font color="red">Home</font>
-                        </b></a></li>
-                <li><a href="#Taal"><b>
-                            <font color="red">Taal</font>
-                        </b></a></li>
-                <li><a href="#Hobbies"><b>
-                            <font color="red">Hobbies</font>
-                        </b></a></li>
-                <li><a href="#Intereste"><b>
-                            <font color="red">Intereste</font>
-                        </b></a></li>
-            </ul>
-        </nav>
-        <div class="Taal" id="Taal">
-            <h2>Taal</h2>
-              <ul>
-                    <li><b><font color="red">English</font>
-                            </b></li>
-                    <li><b><font color="red">Dutch</font>
-                            </b></li>
-                    <li><b><font color="red">Tigrigna</font>
-                            </b></li>
-                </ul>
-        </div>
-        <div class="Hobbies" id="Hobbies">
-            <h2>Hobbies</h2>
-            <ul>
-                    <li><b><font color="red">Watching Movies</font>
-                            </b></li>
-                    <li><b><font color="red">Reading Books</font>
-                            </b></li>
-                    <li><b><font color="red">Cultural Events</font>
-                            </b></li>
-                </ul>
-        </div>
-        <div class="Intereste" id="Intereste">
-            <h2>Intereste</h2>
-            <ul>
-                    <li><b><font color="red">Nature Consetvation</font>
-                            </b></li>
-                    <li><b><font color="red">Environment</font>
-                            </b></li>
-                    <li><b><font color="red">Technology</font>
-                            </b></li>
-                    <li><b><font color="red">Sport</font>
-                            </b></li>
-                </ul>
-        </div>
-        <section><b>GIS Analist</b>
-            <p>Well my first BSc degree is in agriculture and joined the ministry of agriculture have worked at
-                different
-                departments and projects.<br />
-                After couple of years in work experience I took a GIS course in started to apply geo-information in
-                different projects was fascinated by GIS and realised that I have to pursue my postgraduate study in
-                geo-information and managed to get MSc.</p>
-        </section>
-        <section><b>MSc Student</b>
-            <p>Well my first BSc degree is in agriculture and joined the ministry of agriculture have worked at
-                different
-                departments and projects.<br />
-                After couple of years in work experience I took a GIS course in started to apply geo-information in
-                different projects was fascinated by GIS and realised that I have to pursue my postgraduate study in
-                geo-information and managed to get MSc.</p>
-        </section>
-        <section><b>Project Planner</b>
-            <p>Well my first BSc degree is in agriculture and joined the ministry of agriculture have worked at
-                different
-                departments and projects.<br />
-                After couple of years in work experience I took a GIS course in started to apply geo-information in
-                different projects was fascinated by GIS and realised that I have to pursue my postgraduate study in
-                geo-information and managed to get MSc.</p>
-        </section>
-        <section><b>Regional Planner</b>
-            <p>Well my first BSc degree is in agriculture and joined the ministry of agriculture have worked at
-                different
-                departments and projects.<br />
-                After couple of years in work experience I took a GIS course in started to apply geo-information in
-                different projects was fascinated by GIS and realised that I have to pursue my postgraduate study in
-                geo-information and managed to get MSc.</p>
-        </section>
-
-
-        <script src="main.js"></script>
     </div>
+    <div class="container1">
+        <h3 style="text-align:center;"><i class="fas fa-code fa-2x"></i> Junior Web Developer</h3><br>
+        <p>• HTML <i class="fab fa-html5"></i></p>
+        <p>• CSS <i class="fab fa-css3-alt"></i></p>
+        <p>• Java <i class="fab fa-java"></i></p>
+        <p>• PHP <i class="fab fa-php"></i></p>
+        <p>• Laravel <i class="fab fa-laravel"></i></p>
+                           
+                                
+    </div>
+    <div id="back-image1">
+            <div class="row h-100">
+                <div class="col-md-12 align-self-center">
+                    <h1 class="text-center3"><b>Work Experience</b></h1>
+                </div>
+            </div>
+        </div>
+        <div class="container2">
+                <h3 style="text-align:center;"><i class="fas fa-map-marked-alt fa-2x"></i>  Freelancer GIS analist</h3><br>
+                <p>• Spatial analysis <i class="fas fa-map-marked"></i></p>
+                <p>• Image Classification <i class="fas fa-map-marked-alt"></i></p>
+                <p>• Data analysis <i class="fas fa-chart-bar"></i></p>
+                <p>• Forest Biomass estimation <i class="fas fa-map-marked"></i></p>
+                <p>• Monitoring using mapping <i class="fas fa-map-marked"></i></p>
+        </div>
+        <div id="back-image1">
+                <div class="row h-100">
+                    <div class="col-md-12 align-self-center">
+                        <h1 class="text-center3"><b>Work Experience</b></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="container3">
+                    <h3 style="text-align:center;"><i class="fas fa-suitcase fa-2x"></i>  Project Panner & GIS Analist  <i class="fas fa-map-marked-alt fa-2x"></i></h3><br>
+                    <p>• Coordinator of regional projects <i class="fas fa-suitcase"></i></p>
+                    <p>• Coordinator of UNDP, Eu and IFAD projects <i class="fas fa-suitcase"></i></p>
+                    <p>• Agricultural project design and implementation <i class="fas fa-edit"></i></p>
+                    <p>• Monitoring using mapping <i class="fas fa-map-marked"></i></p>
+            </div>
+            <div id="back-image1">
+                    <div class="row h-100">
+                        <div class="col-md-12 align-self-center">
+                            <h1 class="text-center3"><b>Work Experience</b></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="container4">
+                        <h3 style="text-align:center;"><i class="fas fa-suitcase fa-2x"></i>  Regional Planner</h3><br>
+                        <p>• Coordinator of regional projects <i class="fas fa-suitcase"></i></p>
+                        <p>• Agricultural project design and implementation <i class="fas fa-edit"></i></p>
+                        <p>• Prepation of regional project proposals <i class="fas fa-edit"></i></p>
+                        <p>• Prepation of reports <i class="fas fa-edit"></i></p>
+                </div>
+        <div id="back-image1">
+                <div class="row h-100">
+                    <div class="col-md-12 align-self-center">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="boxes">
+            <div class="box">
+                    <i class="far fa-envelope fa-3x"></i><h3>Address</h3>
+                <p>- E-mail semeretesfai4@gmail.com <i class="fas fa-at"></i> </p>
+                <p>- Tel +3187532413 <i class="fas fa-mobile-alt"></i></p>
+                <p>- Street Wethouder Haanjesstraat 56, 7531XS</p>
+                <p>- Enschede <i class="fas fa-city"></i></p>
+            </div>
+            
+            
+                        
+        </div>
+        <div class="footer-main-div">
+            <div class="footer-social-icons">
+<ul>
+    <li><a href="#" class="fab fa-facebook fa-2x"></a></li>
+    <li><a href="#" class="fab fa-twitter fa-2x"></a></li>
+    <li><a href="#" class="fab fa-google fa-2x"></a></li>
+    <li><a href="#" class="fab fa-linkedin fa-2x"></a></li>
+</ul>
+            </div>
+           
 
-</body>
 
+        </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>

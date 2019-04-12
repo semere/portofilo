@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+    <title>Home</title>
+    <script type="text/javascript">
+        function togglemenu(){
+            document.getElementById('sidebar').classList.toggle('active');
+        }
+    </script>
+    <style>
+        body {
+            line-height: 1;
+            background: url(barley.jpg) no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            opacity: 0.5%;
+            position: relative;
+            overflow-x: hidden;
+        }
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+        .container {
+            width: 150%;
+            margin: 0 auto;
+        }
+        .container1 {
+            position: absolute;
+            top: 200px;
+            left: 250px;
+            width: 150%;
+        }
+       
+        .intro1 {
+            position: absolute;
+            top: 340px;
+            left: 210px;
+            font-size: 30px;
+            font-weight: 80px;
+            font-family: Orator Std;
+            text-transform: uppercase;
+            color: rgb(100, 13, 10);
+            text-shadow: 3px 2px #c0c2c4;
+            transition: transform .1s;
+        }
+        .intro1:hover {
+  -ms-transform: scale(1.5); 
+  -webkit-transform: scale(1.5); 
+  transform: scale(1.5); 
+}
+        .intro {
+            position: absolute;
+            top: 280px;
+            left: 300px;
+            font-size: 60px;
+            font-weight: 0px;
+            text-transform: uppercase;
+            color: rgb(13, 5, 85);
+            text-shadow: 3px 2px #c0c2c4;
+            transition: transform .1s;
+            
+        }
+        .intro:hover {
+  -ms-transform: scale(1.5); 
+  -webkit-transform: scale(1.5); 
+  transform: scale(1.5); 
+}
+        #pic{
+        position: absolute;
+        top: 120px;
+        left: 550px;
+        border-radius: 50%;    
+        padding: 20px;
+        transition: transform .1s;
+        
+        }
+
+#pic:hover {
+  -ms-transform: scale(1.5); 
+  -webkit-transform: scale(1.5); 
+  transform: scale(1.5); 
+}
+      
+    #sidebar {
+        position: fixed;
+        width: 150px;
+        height: 38%;
+        left: -11%;
+        background: #06066899;
+    }
+    #sidebar li {
+        color:rgba(230,230,230,0.9);
+        list-style: none;
+        padding: 15px 10px;
+        border-bottom: 1px solid rgba(100,100,100,0.3);
+        text-align: center;
+    }
+    #sidebar ul li a{
+        color:rgba(230,230,230,0.9);
+        text-decoration: none;
+    }
+    #sidebar .toggle-btn{
+       position: absolute;
+       top: 2%;
+       left: 150px;       
+    }
+    #sidebar .toggle-btn span{
+       display:block;
+       background-color: rgb(37, 34, 34);
+       width:30px;
+       height: 5px;
+       margin: 3px;
+       cursor: pointer;
+    }
+   
+    #sidebar.active{
+        left: 2px;
+    }
+ 
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 35%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+@media (max-width:768px) {
+    .container {
+        display: block;
+        position: relative;
+    }
+    .container1 {
+        display: block;
+        
+    }
+    #sidebar {
+        display: block;
+        text-align: center;
+    }
+    ul {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    ul li {
+        display: block;
+        text-align: center;
+    }
+    .toggle-btn {
+        display: block;
+        text-align: center;
+    }
+    .toggle-btn span {
+        display: block;
+        text-align: center;
+    }
+    #pic {
+        display: flex;
+        position: relative;
+        top: 200px;
+        left: 60px;
+        width: 50%;
+        padding-bottom: 20px 0px 0px;
+    }
+    .intro {
+        display: block;
+        position: relative;
+        top: 270px;
+        left: -200px;
+    }
+    .intro1 {
+        display: block;
+        position: relative;
+        top: 280px;
+        left: -220px;
+    }
+}
+#myBtn{
+    position: absolute;
+    top: 190px;
+    left: 40px;
+    border: none;
+    text-align: center;
+    color: rgba(230,230,230,0.9);
+    background-color: #555b64e8;
+    cursor: pointer;  
+}
+hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+  border-color: blue;
+} 
+    </style>
+</head>
+<body>
+       
+<div id="sidebar" onclick="togglemenu()">
+        <div class="toggle-btn"> 
+            <span></span>
+            <span></span>
+            <span></span>
+        </div> 
+        <ul>
+            <li><a  href="Home.html">Home</a></li>
+            <li><a  href="Aboutme.html">About Me</a></li>
+            <li><a  href="portofilionew.html">Portofilio</a></li>
+            <li><a  href="Cv.html">CV</a></li>
+            <button id="myBtn">Contact</button>
+        </ul>
+</div>
+
+<div class="container1">
+    <div class="intro">
+        <h4>Junior GIS Developer</h4>
+    </div>
+    <div class="intro1">
+            <h1>Semere Tesfai Abraham</h1>
+        </div>
+</div>
+<div id="image">
+        <div class="row h-80">
+            <div class="col-md-6 align-self-top">
+                
+                <img id=pic src="Semere.png">
+            </div>
+        </div>
+    </div>
+    
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+
+            <span class="close">&times;</span>
+                <span><i style="text-align:center;" class="far fa-envelope fa-2x"></i> <b>Contact Address</b> <hr></span>
+            <p><i class="far fa-hand-point-right"></i> semeretesfai4@gmail.com </p>
+                <p><i class="far fa-hand-point-right"></i> +3187532413 <i class="fas fa-mobile-alt"></i></p>
+                <p><i class="far fa-hand-point-right"></i> Wethouder Haanjesstraat 56, 7531XS</p>
+                <p><i class="far fa-hand-point-right"></i> Enschede <i class="fas fa-city"></i></p>
+                
+   </div>
+          </div>
+          
+          <script>
+            // Get the modal
+            var modal = document.getElementById('myModal');
+            
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+            </script>
+           
+                
+</body>
+</html>
